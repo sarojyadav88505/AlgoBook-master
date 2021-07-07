@@ -202,15 +202,17 @@ class _AlgoPageState extends State<AlgoPage> {
                 height: 20,
               ),
               InkWell(
-                  child: new Text(
-                    'Go to Feedback',
-                    style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      color: defColor,
-                      fontSize: 20,
-                    ),
+                child: new Text(
+                  'Go to Feedback',
+                  style: TextStyle(
+                    decoration: TextDecoration.underline,
+                    color: defColor,
+                    fontSize: 20,
                   ),
-                  onTap: () => launch('https://play.google.com/store/apps')),
+                ),
+                onTap: () => launch(
+                    'https://www.facebook.com/profile.php?id=100051618122414'),
+              ),
               SizedBox(
                 height: 50,
               ),

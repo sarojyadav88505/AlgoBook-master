@@ -72,7 +72,7 @@ class Store {
 
   var diction = {
     0: "B U B B L E\n S O R T { }",
-    1: "S E L E C T I O N\n S O R T { } ",
+    1: "A E L E C T I O N\n S O R T { } ",
     2: "M E R G E \n S O R T { }",
     3: "S H E L L\n S O R T { }",
     4: "Q U I C K\n S O R T { }",
@@ -107,7 +107,6 @@ class Store {
     33: "S E T\nR E P R E S E N T A T I O N { }",
     34: "G E N E R A T I N G\nS U B S E T S { }",
     35: "G E N E R A T I N G\nP E R M U T A T I O N S { }",
-    
   };
 
   var dsUsed = {
@@ -127,11 +126,12 @@ class Store {
     13: "O(mn)",
     14: "O(n\u00B2)",
     31: "O(n)",
+    32: "O(ns)",
   };
   var code = {
     0: 'assets/files/bubble_sort.txt',
     1: 'assets/files/selection_sort.txt',
-    2:'assets/files/merge_sort.txt',
+    2: 'assets/files/merge_sort.txt',
     3: 'assets/files/shell_sort.txt',
     4: 'assests/files/quick_sort.txt',
     5: 'assets/files/heap_sort.txt',
@@ -139,32 +139,31 @@ class Store {
     7: 'assets/files/kruskals_algorithm.txt',
     8: 'assets/files/DFS.txt',
     9: 'assets/files/bfs.txt',
-    10:'assets/files/bellman_ford.txt',
+    10: 'assets/files/bellman_ford.txt',
     11: 'assets/files/floyd_warshall.txt',
     12: 'assets/files/LCS.txt',
     13: 'assets/files/rabin_karp.txt',
     14: 'assets/files/linear_search.txt',
-    15:'assets/files/binary_search.txt',
-    16:'assets/files/counting_sort.txt',
+    15: 'assets/files/binary_search.txt',
+    16: 'assets/files/counting_sort.txt',
     17: 'assets/files/radix_sort.txt',
     18: 'assets/files/bucket_sort.txt',
     19: 'assets/files/dijkstra.txt',
     20: 'assets/files/topological_sort.txt',
-    21:'assets/files/bellman_ford.txt',
+    21: 'assets/files/bellman_ford.txt',
     22: 'assets/files/bridges_in_a_graph.txt',
-    23:'assets/files/Longest_increasing_subsequence.txt',
+    23: 'assets/files/Longest_increasing_subsequence.txt',
     24: 'assets/files/knapsack.txt',
     25: 'assets/files/minimum_partition.txt',
     26: 'assets/files/paths_in_a_grid.txt',
     27: 'assets/files/Sieve_of_erastosthenes.txt',
     28: 'assets/files/monto_carlo.txt',
     29: 'assets/files/fermats.txt',
-    30:'assets/files/kmp.txt',
-    31:'assets/files/max_subarray_sum.txt',
+    30: 'assets/files/kmp.txt',
+    31: 'assets/files/max_subarray_sum.txt',
     32: 'assets/files/number_in_bits.txt',
     33: 'assets/files/set_representation.txt',
     34: 'assets/files/generating_subsets.txt',
-    35:'assets/files/generating_permutation.txt',
-    
+    35: 'assets/files/generating_permutation.txt',
   };
 }
