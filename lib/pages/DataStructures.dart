@@ -6,6 +6,7 @@ Future<String> getFileData(String path) async {
 
 class Store {
   var searchAlgo = {
+    // this is used for Search term so please use Proper Search term
     'bubble': 0,
     'selection': 1,
     'merge': 2,
@@ -24,7 +25,7 @@ class Store {
     'longest': 12,
     'rabin': 13,
     'karp': 13,
-    'linear': 14,
+    'constructor': 14,
     'binary': 15,
     'counting': 16,
     'radix': 17,
@@ -55,7 +56,7 @@ class Store {
     'subarray': 31,
     'bit': 32,
     'permutation': 35,
-    'round robin': 101,
+    'round robin': 11,
   };
 
   int searchResult(var _text) {
@@ -85,7 +86,7 @@ class Store {
     11: "F L L O Y D \n W A R S H A L L { }",
     12: "LONGEST COMMON\nSUBSEQUENCE { }",
     13: "R A B I N-K A R P'S\nA L G O R I T H M { }",
-    14: "L I N E A R\nS E A R C H { }",
+    14: "\nC O N S T R U C T O R{ }",
     15: "B I N A R Y\nS E A R C H { }",
     16: "C O U N T I N G\nS O R T { }",
     17: "R A D I X\nS O R T { }",
@@ -109,25 +110,6 @@ class Store {
     35: "G E N E R A T I N G\nP E R M U T A T I O N S { }",
   };
 
-  var dsUsed = {
-    0: "O(n\u00B2)",
-    1: "O(n\u00B2)",
-    2: "O(nlog(n))",
-    3: "O(n\u00B2)",
-    4: "O(nlog(n))",
-    5: "O(nlog(n))",
-    6: "O(ElogV)",
-    7: "O(ElogV)",
-    8: "O(V)",
-    9: "O(V)",
-    10: "O(V)",
-    11: "O(n\u00B3)",
-    12: "O(nlog(n))",
-    13: "O(mn)",
-    14: "O(n\u00B2)",
-    31: "O(n)",
-    32: "O(ns)",
-  };
   var code = {
     0: 'assets/files/bubble_sort.txt',
     1: 'assets/files/selection_sort.txt',

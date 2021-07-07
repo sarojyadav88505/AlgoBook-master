@@ -99,16 +99,11 @@ class _AlgoExistState extends State<AlgoExist> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              "TIME COMPLEXITY",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 10),
-                            ),
-                            Wrap(
-                              children: [
-                                Text('${a.dsUsed[num]}'),
-                              ],
-                            ),
+                            // Text(
+                            //   "VipCoding",
+                            //   style: TextStyle(
+                            //       fontWeight: FontWeight.bold, fontSize: 10),
+                            // ),
                           ],
                         )),
                     SizedBox(
@@ -117,9 +112,9 @@ class _AlgoExistState extends State<AlgoExist> {
                     Container(
                       decoration: BoxDecoration(
                           color: defColor.withOpacity(0.3),
-                          borderRadius: BorderRadius.all(Radius.circular(30))),
-                      padding: EdgeInsets.all(5),
-                      margin: EdgeInsets.all(5),
+                          borderRadius: BorderRadius.all(Radius.circular(10))),
+                      // padding: EdgeInsets.symmetric(vertical: 5),
+                      // margin: EdgeInsets.all(5),
                       child: SingleChildScrollView(
                         child: Column(
                           children: [

@@ -74,134 +74,158 @@ class _MyHomePageState extends State<MyHomePage> {
     }
 
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(50),
-                    bottomLeft: Radius.circular(50)),
-                color: Color(0xFF24A19C)),
-            height: MediaQuery.of(context).size.height * 0.3,
-            width: double.infinity,
-            child: Center(
-              child: Text(
-                "VipCoding \n A L G O R I T H M S \n B O O K { }",
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-                textAlign: TextAlign.center,
-              ),
+        bottomNavigationBar: Container(
+          width: MediaQuery.of(context).size.width,
+          height: 18,
+          alignment: Alignment.center,
+          child: RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                    text: "Powered by",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12)),
+                TextSpan(
+                    text: " Vipcoding",
+                    style: TextStyle(
+                        color: Color(0xFF24A19C), fontWeight: FontWeight.bold))
+              ],
             ),
           ),
-          SizedBox(
-            height: 8,
-          ),
-          Center(
-            child: Container(
-                height: 50,
-                width: MediaQuery.of(context).size.width - 60,
-                padding: EdgeInsets.only(left: 10),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(50)),
-                    color: Colors.white..withOpacity(0.5),
-                    border: Border.all(color: Color(0xFF24A19C), width: 1.5),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey,
-                          offset: Offset(1, 1),
-                          blurRadius: 3)
-                    ]),
-                child: TextFormField(
-                  controller: _controller,
-                  textInputAction: TextInputAction.done,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(50)),
-                      borderSide: BorderSide.none,
-                    ),
-                    hintText: ' Search',
-                    suffixIcon: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => AlgoExist(
-                                  num: A.searchResult(_controller.text))),
-                        );
-                      },
-                      child: Icon(
-                        Icons.search,
-                        color: Color(0xFF24A19C).withOpacity(0.8),
+        ),
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(50),
+                          bottomLeft: Radius.circular(50)),
+                      color: Color(0xFF24A19C)),
+                  height: MediaQuery.of(context).size.height * 0.3,
+                  width: double.infinity,
+                  child: Center(
+                    child: Text(
+                      "VipCoding \n A L G O R I T H M S \n B O O K { }",
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
+                      textAlign: TextAlign.center,
                     ),
-                    hintStyle: new TextStyle(
-                        color: Color(0xFF24A19C).withOpacity(0.7),
-                        fontSize: 20),
                   ),
-                  onFieldSubmitted: (term) {
-                    find(_controller.text);
-                  },
-                )),
-          ),
-          SizedBox(
-            height: 8,
-          ),
-          heading('SEARCHING'),
-          customTile("Linear Search", 14),
-          customTile("Binary Search", 15),
-          //s
-          heading('SORTING'),
-          customTile("Bubble Sort", 0),
-          customTile("Selection Sort", 1),
-          customTile("Merge Sort", 2),
-          customTile("Shell Sort", 3),
-          customTile("Quick Sort", 4),
-          customTile("Heap Sort", 5),
-          customTile("Counting Sort", 16),
-          customTile("Radix Sort", 17),
-          customTile("Bucket Sort", 18),
-          customTile("KMP Algorithm", 30),
-          //s
-          heading('GRAPHS'),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Center(
+                  child: Container(
+                      height: 50,
+                      width: MediaQuery.of(context).size.width - 60,
+                      padding: EdgeInsets.only(left: 10),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(50)),
+                          color: Colors.white..withOpacity(0.5),
+                          border:
+                              Border.all(color: Color(0xFF24A19C), width: 1.5),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey,
+                                offset: Offset(1, 1),
+                                blurRadius: 3)
+                          ]),
+                      child: TextFormField(
+                        controller: _controller,
+                        textInputAction: TextInputAction.done,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(50)),
+                            borderSide: BorderSide.none,
+                          ),
+                          hintText: ' Search',
+                          suffixIcon: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => AlgoExist(
+                                        num: A.searchResult(_controller.text))),
+                              );
+                            },
+                            child: Icon(
+                              Icons.search,
+                              color: Color(0xFF24A19C).withOpacity(0.8),
+                            ),
+                          ),
+                          hintStyle: new TextStyle(
+                              color: Color(0xFF24A19C).withOpacity(0.7),
+                              fontSize: 20),
+                        ),
+                        onFieldSubmitted: (term) {
+                          find(_controller.text);
+                        },
+                      )),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                heading('Constructor'),
+                customTile("Constructor", 14),
+                customTile("Binary Search", 15),
+                //s
+                heading('SORTING'),
+                customTile("Bubble Sort", 0),
+                customTile("Selection Sort", 1),
+                customTile("Merge Sort", 2),
+                customTile("Shell Sort", 3),
+                customTile("Quick Sort", 4),
+                customTile("Heap Sort", 5),
+                customTile("Counting Sort", 16),
+                customTile("Radix Sort", 17),
+                customTile("Bucket Sort", 18),
+                customTile("KMP Algorithm", 30),
+                //s
+                heading('GRAPHS'),
 
-          customTile("DFS Algorithm", 8),
-          customTile("BFS Algorithm", 9),
-          customTile("Bellman Ford's Algorithm", 10),
-          customTile("Flloyd - Warshall's", 11),
-          customTile("Dijkstra's Algorithm", 19),
-          customTile("Topological Sort", 20),
-          customTile("Johnson's Algorithm", 21),
-          customTile("Bridges in a graph", 22),
-          heading('GREEDY ALGORITHMS'),
-          customTile("Prim's Algorithm", 6),
-          customTile("Kruskal's Algorithm", 7),
-          //s
-          heading('DYNAMIC PROGRAMMING'),
-          customTile("Longest Common subsequence", 12),
-          customTile("Longest Increasing subsequence", 23),
-          customTile("Knapsack Problem", 24),
-          customTile("Minimum partition algorithm", 25),
-          customTile("Longest path in a matrix", 26),
-          //s
-          heading('BIT MANIPULATIONS'),
-          customTile("Bit Representation of a number", 32),
-          customTile("Set representation", 33),
-          //s
-          heading('OTHER ALGORITHMS'),
-          customTile("Rabin-Karp's Algorithm", 13),
-          customTile("Sieve of Eratosthenes", 27),
-          customTile("Fermat's Primality test", 29),
-          customTile("Monto-Carlo Algorithm", 28),
-          customTile("Maximum Subarray Sum", 31),
-          customTile("Generating subsets", 34),
-          customTile("Generating permutations", 35)
-        ],
-      ),
-    ));
+                customTile("DFS Algorithm", 8),
+                customTile("BFS Algorithm", 9),
+                customTile("Bellman Ford's Algorithm", 10),
+                customTile("Flloyd - Warshall's", 11),
+                customTile("Dijkstra's Algorithm", 19),
+                customTile("Topological Sort", 20),
+                customTile("Johnson's Algorithm", 21),
+                customTile("Bridges in a graph", 22),
+                heading('GREEDY ALGORITHMS'),
+                customTile("Prim's Algorithm", 6),
+                customTile("Kruskal's Algorithm", 7),
+                //s
+                heading('DYNAMIC PROGRAMMING'),
+                customTile("Longest Common subsequence", 12),
+                customTile("Longest Increasing subsequence", 23),
+                customTile("Knapsack Problem", 24),
+                customTile("Minimum partition algorithm", 25),
+                customTile("Longest path in a matrix", 26),
+                //s
+                heading('BIT MANIPULATIONS'),
+                customTile("Bit Representation of a number", 32),
+                customTile("Set representation", 33),
+                //s
+                heading('OTHER ALGORITHMS'),
+                customTile("Rabin-Karp's Algorithm", 13),
+                customTile("Sieve of Eratosthenes", 27),
+                customTile("Fermat's Primality test", 29),
+                customTile("Monto-Carlo Algorithm", 28),
+                customTile("Maximum Subarray Sum", 31),
+                customTile("Generating subsets", 34),
+                customTile("Generating permutations", 35)
+              ],
+            ),
+          ),
+        ));
   }
 }
